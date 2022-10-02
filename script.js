@@ -1,6 +1,7 @@
 const startButton = document.getElementById('start-btn');
 const questionElement = document.getElementById('question')
-const answerButtomsElement = document.getElementById('answer-buttons')
+const answerButtonsElement = document.getElementById('answer-buttons')
+const bla = doc
 
 let shuffledQuestions, currentQuestionIndex
 
@@ -19,9 +20,16 @@ function setNextQuestion () {
 function showQuestion (question) {
     questionElement.innerText = question.question
     question.answers.forEach(answer => {
-        const button = document.createElement('button')
-        button.innerText = answer.text
-        answerButtomsElement.appendChild(button)
+   
+
+        /*
+        const newText = document.createElement('text')
+        newText.innerText = answer.text
+        document.getElementById('myButton1').innerText = newText
+        document.getElementById('myButton2').innerText = newText
+        document.getElementById('myButton3').innerText = answer
+        document.getElementById('myButton4').innerText = answer 
+        */
     })
 }
 

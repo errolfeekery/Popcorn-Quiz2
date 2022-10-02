@@ -1,7 +1,8 @@
 const startButton = document.getElementById('start-btn');
 const questionElement = document.getElementById('question')
-const answerButtonsElement = document.getElementById('answer-buttons')
-const bla = doc
+const choices = Array.from(document.querySelectorAll('.answer-buttons'))
+
+console.log(choices)
 
 let shuffledQuestions, currentQuestionIndex
 
@@ -12,6 +13,7 @@ function startGame () {
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     setNextQuestion ()
+    setNextChoices()
 }
 function setNextQuestion () {
     showQuestion(shuffledQuestions[currentQuestionIndex])
@@ -20,19 +22,34 @@ function setNextQuestion () {
 function showQuestion (question) {
     questionElement.innerText = question.question
     question.answers.forEach(answer => {
-   
+        const p = document.createElement('p')
+        p.innerText = answer.text
+        choices.forEach(choice => {
+            const number = choice.dataset['number']
+            choice.innerText = setNextChoices['p' + 'number']
+        }
+        
+    )
 
-        /*
-        const newText = document.createElement('text')
-        newText.innerText = answer.text
-        document.getElementById('myButton1').innerText = newText
-        document.getElementById('myButton2').innerText = newText
-        document.getElementById('myButton3').innerText = answer
-        document.getElementById('myButton4').innerText = answer 
-        */
-    })
+
+/*
+function setNextChoices (answers) {
+    const number = choice.dataset['number']
+
 }
+*/
+/*
+   question.answers.forEach(answer => {
+        const p = document.createElement('p')
+        p.innerText = answer.text
+        */
+/*
+choices.forEach(choice => {
 
+    const number = choice.dataset['number']
+    choice.innerText = showQuestion['choice' + 'number']
+})
+*/
 function giveAnswer () {
 
 }

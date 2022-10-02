@@ -1,7 +1,9 @@
-var start = true;
+const startButton = document.getElementById("start-btn");
+
+startButton.addEventListener('click', startGame);
 
 function startGame () {
-    
+    console.log("hello");
 }
 
 function nextQuestion () {
@@ -9,5 +11,5 @@ function nextQuestion () {
 }
 
 function giveAnswer () {
-    
+
 }

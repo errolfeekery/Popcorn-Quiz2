@@ -22,26 +22,25 @@
             </div>
     </section>
     <div class="container-fluid">
-        <div id="game">
-            <div class="container-fluid bg-light text-light text-center py-5" id="hud-answer">
-
-            </div>
-            <div class="container bg-dark text-light p-5 text-center" id="question">
+        <div class="container text-center">
+            <button type="button" class="btn btn-outline-primary btn-lg mt-5" id="start-btn">Start</button>
+        </div>
+        <div class="container" id="question-container">
+            <div class="container bg-dark text-light p-5 mt-5 text-center" id="question">
                 Question
             </div>
-            <div class="container bg-primary p-5 mt-5 text-center">
-                <div class="btn-group container-fluid" role="group" aria-label="Basic outlined example">
+            <div class="container bg-primary p-2 mt-5 text-center">
+                <div class="btn-group container-fluid bg-primary p-5 text-center" id="answer-buttons" role="group" aria-label="Basic outlined example">
                     <button type="button" class="btn btn-outline-light" id="choice1">Choice 1</button>
                     <button type="button" class="btn btn-outline-light" id="choice2">Choice 2</button>
                     <button type="button" class="btn btn-outline-light" id="choice3">Choice 3</button>
                     <button type="button" class="btn btn-outline-light" id="choice4">Choice 4</button>
                   </div>
             </div>
+        </div>
             <div class="container bg-white mt-5 text-center">
-                <div class="btn-group container-fluid" role="group" aria-label="Basic outlined example">
-                    <button type="button" class="btn btn-outline-primary" id="submit">Submit</button>
-                    <button type="button" class="btn btn-outline-primary" id="next">Next</button>
-                    </div>
+                <button type="button" class="btn btn-outline-primary btn-lg" id="next">Next</button>
+                </div>
             </div>
             </div>
         </div>

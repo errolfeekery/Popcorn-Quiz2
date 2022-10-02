@@ -1,6 +1,7 @@
 const startButton = document.getElementById('start-btn');
 const questionElement = document.getElementById('question')
 const answerButtomsElement = document.getElementById('answer-buttons')
+const choices = Array.from(document.getElementById(choice-text))
 
 let shuffledQuestions, currentQuestionIndex
 
@@ -18,6 +19,10 @@ function setNextQuestion () {
 
 function showQuestion (question) {
     questionElement.innerText = question.question
+    choices.forEach(choice => {
+        const number = choice.dataset['number']
+        choice.innerText = showQuestion['choice' + 'number']
+    })
 }
 
 function giveAnswer () {

@@ -18,7 +18,7 @@ function setNextQuestion () {
 
 function showQuestion (question) {
     questionElement.innerText = question.question
-    questions.answers.forEach(answer => {
+    question.answers.forEach(answer => {
         const button = document.createElement('button')
         button.innerText = answer.text
         answerButtomsElement.appendChild(button)

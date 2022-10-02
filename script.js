@@ -1,22 +1,30 @@
 const startButton = document.getElementById('start-btn');
 const questionElement = document.getElementById('question')
-const answerElement = document.getElementById('answer-buttons')
+const answerButtomsElement = document.getElementById('answer-buttons')
+
+let shuffledQuestions, currentQuestionIndex
 
 startButton.addEventListener('click', startGame);
 
 function startGame () {
-    nextQuestion ()
+    console.log('start')
+    shuffledQuestions = questions.sort(() => Math.random() - .5)
+    currentQuestionIndex = 0
+    setNextQuestion ()
+}
+function setNextQuestion () {
+    showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
-function nextQuestion (questions) {
-    questionElement.innerText = question.questions
+function showQuestion (question) {
+    questionElement.innerText = question.question
 }
 
 function giveAnswer () {
 
 }
 
-const questions = [
+const questions = [ 
     {
     question: "The code in The Martrix comes from what food recipes?",
     answers: [

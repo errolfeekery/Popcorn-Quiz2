@@ -1,5 +1,6 @@
 const startButton = document.getElementById('start-btn');
 const questionElement = document.getElementById('question')
+const nextButton = document.getElementById('next')
 const btnElement1 = document.getElementById('btn1')
 const btnElement2 = document.getElementById('btn2')
 const btnElement3 = document.getElementById('btn3')
@@ -11,9 +12,15 @@ const choices = Array.from(document.querySelectorAll('.answer-buttons'))
 console.log(choices)
 */
 
+nextButton.addEventListener('click', () => {
+    currentQuestionIndex++
+    
+})
+
 let shuffledQuestions, currentQuestionIndex
 
 startButton.addEventListener('click', startGame);
+
 
 function startGame () {
     console.log('start')
@@ -23,8 +30,13 @@ function startGame () {
 }
 function setNextQuestion () {
     showQuestion(shuffledQuestions[currentQuestionIndex])
+    reset ()
 }
 
+nextButton.addEventListener('click', () => {
+    currentQuestionIndex++
+    setNextQuestion ()
+})
 
 function showQuestion (question) {
     questionElement.innerText = question.question
@@ -49,25 +61,43 @@ function showQuestion (question) {
         btnElement4.innerText = question.answers[3].text
         
         if(btnElement1.isCorrect) {
-            btnElement1.dataset.isCorrect = answer.correct
+            btnElement1.dataset.isCorrect = answer.isCorrect
         }
 
         if(btnElement2.isCorrect) {
-            btnElement2.dataset.isCorrect = answer.correct
+            btnElement2.dataset.isCorrect = answer.isCorrect
         }
 
         if(btnElement2.isCorrect) {
-            btnElement2.dataset.isCorrect = answer.correct
+            btnElement2.dataset.isCorrect = answer.isCorrect
         }
 
         if(btnElement2.isCorrect) {
-            btnElement2.dataset.isCorrect = answer.correct
+            btnElement2.dataset.isCorrect = answer.isCorrect
         }
-            
         }
-
+        
         )
 
+        btnElement1.addEventListener('click', giveAnswer)
+        btnElement2.addEventListener('click', giveAnswer)
+        btnElement3.addEventListener('click', giveAnswer)
+        btnElement4.addEventListener('click', giveAnswer)
+    }
+
+    function reset () {
+
+    }
+
+    function giveAnswer(e) {
+       const selectedButton = e.target
+       const correct = selectedButton.dataset.isCorrect
+       if (correct == true) {
+        btnElement1.style.color = "green"
+        btnElement2.style.color = "green"
+        btnElement3.style.color = "green"
+        btnElement4.style.color = "green"
+       }
     }
     /*    
 

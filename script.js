@@ -29,6 +29,7 @@ function setNextQuestion () {
 function showQuestion (question) {
     questionElement.innerText = question.question
    
+    /*
         btnElement1.innerText = question.answers[0].text
         btnElement2.innerText = question.answers[1].text
         btnElement3.innerText = question.answers[2].text
@@ -38,8 +39,37 @@ function showQuestion (question) {
         btnElement2.value = question.answers[1].isCorrect
         btnElement3.value = question.answers[2].isCorrect
         btnElement4.value = question.answers[3].isCorrect
-
+    */
+    
+        question.answers.forEach(answer => {
+        
+        btnElement1.innerText = question.answers[0].text
+        btnElement2.innerText = question.answers[1].text
+        btnElement3.innerText = question.answers[2].text
+        btnElement4.innerText = question.answers[3].text
+        
+        if(btnElement1.isCorrect) {
+            btnElement1.dataset.isCorrect = answer.correct
         }
+
+        if(btnElement2.isCorrect) {
+            btnElement2.dataset.isCorrect = answer.correct
+        }
+
+        if(btnElement2.isCorrect) {
+            btnElement2.dataset.isCorrect = answer.correct
+        }
+
+        if(btnElement2.isCorrect) {
+            btnElement2.dataset.isCorrect = answer.correct
+        }
+            
+        }
+
+        )
+
+    }
+    /*    
 
     var selected = ""
 
@@ -72,7 +102,7 @@ function showQuestion (question) {
     })
 
     console.log(selected)
-
+*/
 
 const questions = [ 
     {

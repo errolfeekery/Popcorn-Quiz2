@@ -6,53 +6,36 @@ const btnElement2 = document.getElementById('btn2')
 const btnElement3 = document.getElementById('btn3')
 const btnElement4 = document.getElementById('btn4')
 
-/*
-const choices = Array.from(document.querySelectorAll('.answer-buttons'))
-
-console.log(choices)
-*/
-
-nextButton.addEventListener('click', () => {
-    currentQuestionIndex++
-    
-})
-
 let shuffledQuestions, currentQuestionIndex
 
 startButton.addEventListener('click', startGame);
 
+nextButton.addEventListener('click', () => {
+    currentQuestionIndex++ 
+    setNextQuestion () 
+})
 
 function startGame () {
     console.log('start')
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     setNextQuestion ()
+    showStuff ()
 }
+
 function setNextQuestion () {
     showQuestion(shuffledQuestions[currentQuestionIndex])
     reset ()
 }
 
-nextButton.addEventListener('click', () => {
-    currentQuestionIndex++
-    setNextQuestion ()
-})
+function showStuff (startButton) {
+const hide = startButton.style.display = "none"
+
+}
 
 function showQuestion (question) {
     questionElement.innerText = question.question
-   
-    /*
-        btnElement1.innerText = question.answers[0].text
-        btnElement2.innerText = question.answers[1].text
-        btnElement3.innerText = question.answers[2].text
-        btnElement4.innerText = question.answers[3].text
-
-        btnElement1.value = question.answers[0].isCorrect
-        btnElement2.value = question.answers[1].isCorrect
-        btnElement3.value = question.answers[2].isCorrect
-        btnElement4.value = question.answers[3].isCorrect
-    */
-    
+      
         question.answers.forEach(answer => {
         
         btnElement1.innerText = question.answers[0].text
@@ -75,18 +58,13 @@ function showQuestion (question) {
         if(btnElement2.isCorrect) {
             btnElement2.dataset.isCorrect = answer.isCorrect
         }
-        }
-        
-        )
-
+      }
+    )
+    
         btnElement1.addEventListener('click', giveAnswer)
         btnElement2.addEventListener('click', giveAnswer)
         btnElement3.addEventListener('click', giveAnswer)
         btnElement4.addEventListener('click', giveAnswer)
-    }
-
-    function reset () {
-
     }
 
     function giveAnswer(e) {
@@ -98,41 +76,10 @@ function showQuestion (question) {
         btnElement3.style.color = "green"
         btnElement4.style.color = "green"
        }
+       if (shuffledQuestions.length > currentQuestionIndex + 1) {
+        startButton.innerText = "Restart"
+       }
     }
-    /*    
-
-    var selected = ""
-
-    btnElement1.addEventListener('click', () => {
-        selected = btnElement1.value
-        if (selected == true) {
-            btnElement1.style.color = "green"
-        }
-    })
-
-    btnElement2.addEventListener('click', () => {
-        selected = btnElement2.value
-        if (selected == true) {
-            btnElement2.style.color = "green"
-        }
-    })
-
-    btnElement3.addEventListener('click', () => {
-        selected = btnElement3.value
-        if (selected == true) {
-            btnElement3.style.color = "green"
-        }
-    })
-
-    btnElement4.addEventListener('click', () => {
-        selected = btnElement4.value
-        if (selected == true) {
-            btnElement4.style.color = "green"
-        }
-    })
-
-    console.log(selected)
-*/
 
 const questions = [ 
     {
@@ -189,9 +136,58 @@ const questions = [
         {text: "Linda Ronstadt", isCorrect: false}
     ]
     }
-
-
 ]
+
+    /*
+    const choices = Array.from(document.querySelectorAll('.answer-buttons'))
+
+    console.log(choices)
+    */
+    /*
+        btnElement1.innerText = question.answers[0].text
+        btnElement2.innerText = question.answers[1].text
+        btnElement3.innerText = question.answers[2].text
+        btnElement4.innerText = question.answers[3].text
+
+        btnElement1.value = question.answers[0].isCorrect
+        btnElement2.value = question.answers[1].isCorrect
+        btnElement3.value = question.answers[2].isCorrect
+        btnElement4.value = question.answers[3].isCorrect
+    */
+    /*    
+
+    var selected = ""
+
+    btnElement1.addEventListener('click', () => {
+        selected = btnElement1.value
+        if (selected == true) {
+            btnElement1.style.color = "green"
+        }
+    })
+
+    btnElement2.addEventListener('click', () => {
+        selected = btnElement2.value
+        if (selected == true) {
+            btnElement2.style.color = "green"
+        }
+    })
+
+    btnElement3.addEventListener('click', () => {
+        selected = btnElement3.value
+        if (selected == true) {
+            btnElement3.style.color = "green"
+        }
+    })
+
+    btnElement4.addEventListener('click', () => {
+        selected = btnElement4.value
+        if (selected == true) {
+            btnElement4.style.color = "green"
+        }
+    })
+
+    console.log(selected)
+*/
 
 /*
 question.answers.forEach(answer => {

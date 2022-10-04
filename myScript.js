@@ -67,12 +67,12 @@ var myQuestions = [
 function generateQuiz(questions, quizContainer, resultsContainer, submitButton) {
 
     function showQuestions(questions, quizContainer) {
-        var output = []
-        var answers
+        var output = [];
+        var answers;
 
         for(var i=0; i<questions.length; i++) {
 
-            answers = []
+            answers = [];
 
             for(letter in questions[i].answers) {
 
@@ -86,7 +86,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             }
 
             output.push(
-                '<div class="question' + questions[i].question + '</div>'
+                '<div class="question">' + questions[i].question + '</div>'
                 + '<div class="answers">' + answers.join('') + '</div>'
             );
         }
@@ -106,7 +106,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
 
         for(var i=0; i<questions.length; i++) {
 
-            userAnswer = (answerContainers[i].querySelectorAll('input[name=question'+i+']:checked')||{}).value
+            userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value
 
             if(userAnswer===questions[i].correctAnswer) {
 

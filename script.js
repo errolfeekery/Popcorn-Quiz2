@@ -1,12 +1,13 @@
+/* Failed javaScript ideas
+
 const startButton = document.getElementById('start-btn');
 const questionElement = document.getElementById('question')
-/*
+
 const nextButton = document.getElementById('next')
 const btnElement1 = document.getElementById('btn1')
 const btnElement2 = document.getElementById('btn2')
 const btnElement3 = document.getElementById('btn3')
 const btnElement4 = document.getElementById('btn4')
-*/
 
 const choices = Array.from(document.querySelectorAll('.answer-buttons-text'))
 console.log(choices)
@@ -27,7 +28,6 @@ function startGame () {
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     setNextQuestion ()
-
 }
 
 function setNextQuestion () {
@@ -41,14 +41,11 @@ function showQuestion (question) {
       
         question.answers.forEach(answer => {
 
-
-        /*
         btnElement1.innerText = question.answers[0].text
         btnElement2.innerText = question.answers[1].text
         btnElement3.innerText = question.answers[2].text
         btnElement4.innerText = question.answers[3].text
-        */
-/*
+
 let newText =""
 
 for (const x of choices) {
@@ -92,7 +89,6 @@ for (const x of choices) {
         startButton.innerText = "Restart"
        }
     }
-*/
 
 const questions = [ 
     {
@@ -151,12 +147,11 @@ const questions = [
     }
 ]
 
-    /*
+    
     const choices = Array.from(document.querySelectorAll('.answer-buttons'))
 
     console.log(choices)
-    */
-    /*
+ 
         btnElement1.innerText = question.answers[0].text
         btnElement2.innerText = question.answers[1].text
         btnElement3.innerText = question.answers[2].text
@@ -165,9 +160,7 @@ const questions = [
         btnElement1.value = question.answers[0].isCorrect
         btnElement2.value = question.answers[1].isCorrect
         btnElement3.value = question.answers[2].isCorrect
-        btnElement4.value = question.answers[3].isCorrect
-    */
-    /*    
+        btnElement4.value = question.answers[3].isCorrect  
 
     var selected = ""
 
@@ -200,9 +193,7 @@ const questions = [
     })
 
     console.log(selected)
-*/
 
-/*
 question.answers.forEach(answer => {
     const p = document.createElement('p')
     p.innerText = answer.text
@@ -210,22 +201,20 @@ question.answers.forEach(answer => {
         const number = choice.dataset['number']
         choice.innerText = setNextChoices['p' + 'number']
     }
-  */  
-/*
+
 function setNextChoices (answers) {
     const number = choice.dataset['number']
 
 }
-*/
-/*
+
    question.answers.forEach(answer => {
         const p = document.createElement('p')
         p.innerText = answer.text
-        */
-/*
-choices.forEach(choice => {
+
+    choices.forEach(choice => {
 
     const number = choice.dataset['number']
     choice.innerText = showQuestion['choice' + 'number']
 })
+
 */

@@ -77,7 +77,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             for(letter in questions[i].answers) {
 
                 answers.push(
-                    '<label>'
+                    '<label class="d-flex">'
                         + '<input type="radio" name="question'+i+'" value="'+letter+'">'
                         + questions[i].answers[letter]
                     +'</label>'
@@ -85,7 +85,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             }
 
             output.push(
-                '<div class="question">' + questions[i].question + '</div>'
+                '<div class="question border border-primary rounded bg-white text-primary flex-nowrap p-3 text-center fs-5 m-3">' + questions[i].question + '</div>'
                 + '<div class="answers">' + answers.join('') + '</div>'
             );
         }

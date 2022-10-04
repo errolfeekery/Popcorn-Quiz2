@@ -1,12 +1,16 @@
 const startButton = document.getElementById('start-btn');
 const questionElement = document.getElementById('question')
+/*
 const nextButton = document.getElementById('next')
 const btnElement1 = document.getElementById('btn1')
 const btnElement2 = document.getElementById('btn2')
 const btnElement3 = document.getElementById('btn3')
 const btnElement4 = document.getElementById('btn4')
+*/
 
-let shuffledQuestions, currentQuestionIndex
+const choices = Array.from(document.querySelectorAll('.answer-buttons-text'))
+console.log(choices)
+
 
 startButton.addEventListener('click', startGame);
 
@@ -15,12 +19,15 @@ nextButton.addEventListener('click', () => {
     setNextQuestion () 
 })
 
+let shuffledQuestions, currentQuestionIndex
+
 function startGame () {
     console.log('start')
+    startButton.classList.add('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     setNextQuestion ()
-    showStuff ()
+
 }
 
 function setNextQuestion () {
@@ -28,21 +35,26 @@ function setNextQuestion () {
     reset ()
 }
 
-function showStuff (startButton) {
-const hide = startButton.style.display = "none"
-
-}
 
 function showQuestion (question) {
     questionElement.innerText = question.question
       
         question.answers.forEach(answer => {
-        
+
+
+        /*
         btnElement1.innerText = question.answers[0].text
         btnElement2.innerText = question.answers[1].text
         btnElement3.innerText = question.answers[2].text
         btnElement4.innerText = question.answers[3].text
-        
+        */
+/*
+let newText =""
+
+for (const x of choices) {
+    answers
+}
+
         if(btnElement1.isCorrect) {
             btnElement1.dataset.isCorrect = answer.isCorrect
         }
@@ -80,6 +92,7 @@ function showQuestion (question) {
         startButton.innerText = "Restart"
        }
     }
+*/
 
 const questions = [ 
     {

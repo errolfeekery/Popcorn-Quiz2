@@ -12,7 +12,7 @@ var myQuestions = [
         d: "Pad thai recpies", 
     },
 
-    correctAnswer: 'b'
+    correctAnswer: 'a'
 
 },
 {
@@ -99,10 +99,10 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
 
     function showResults(questions, quizContainer, resultsContainer) {
 
-        var answerContainers = quizContainer.querySelectorAll('.answers')
+        var answerContainers = quizContainer.querySelectorAll('.answers');
 
-        var userAnswer = ''
-        var numCorrect = 0
+        var userAnswer = '';
+        var numCorrect = 0;
 
         for(var i=0; i<questions.length; i++) {
 
@@ -112,7 +112,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
 
                 numCorrect++
 
-                answerContainers[i].style.color = 'lightgreen'
+                answerContainers[i].style.color = 'lightgreen';
             }
 
             else {

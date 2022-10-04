@@ -6,10 +6,10 @@ var myQuestions = [
     {
     question: "The code in The Martrix comes from what food recipes?",
     answers: {
-        A: " Sushi recipes", 
-        B: " Dumpling recipes",
-        C: " Stir-fry recipes", 
-        D: " Pad thai recpies", 
+        A: " Sushi recipes ", 
+        B: " Dumpling recipes ",
+        C: " Stir-fry recipes ", 
+        D: " Pad thai recpies ", 
     },
 
     correctAnswer: 'A'
@@ -19,10 +19,10 @@ var myQuestions = [
     question: "Where were The Lord of the Rings movies filmed?",
     answers: {
         
-        A: " Ireland",
-        B: " Iceland",
-        C: " New Zealand", 
-        D: " Australia", 
+        A: " Ireland ",
+        B: " Iceland ",
+        C: " New Zealand ", 
+        D: " Australia ", 
     },
 
     correctAnswer: 'C'
@@ -31,10 +31,10 @@ var myQuestions = [
 {
     question: "If you were to watch the Marvel movies in chronological order, which movie would you watch first?",
     answers: {
-        A: " Iron man", 
-        B: " Captain America: The First Avenger",
-        C: " Doctor Strange",
-        D: " Thor",
+        A: " Iron man ", 
+        B: " Captain America: The First Avenger ",
+        C: " Doctor Strange ",
+        D: " Thor ",
     },
 
     correctAnswer: 'B'
@@ -42,10 +42,10 @@ var myQuestions = [
 {
     question: "Which movie is this quote from: 'Here's looking at you kid'",
     answers:  {
-        A: " Breakfast at Tiffany's",
-        B: " Citizen Kane", 
-        C: " Casablanca", 
-        D: " Notorious", 
+        A: " Breakfast at Tiffany's ",
+        B: " Citizen Kane ", 
+        C: " Casablanca ", 
+        D: " Notorious ", 
     },
 
     correctAnswer: 'C'
@@ -54,9 +54,9 @@ var myQuestions = [
 {
     question: "Which famous line from Jaws was ad-libbed?",
     answers:  {
-        A: "'I use to hate the water'", 
-        B: "'Your gonna need a bigger boat'",
-        C: "'All this machine does is swim, and eat, and make little sharks'", 
+        A: " 'I use to hate the water' ", 
+        B: " 'Your gonna need a bigger boat' ",
+        C: " 'All this machine does is swim, and eat, and make little sharks' ", 
     }, 
 
     correctAnswer: 'B'
@@ -114,10 +114,6 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
                 answerContainers[i].style.color = 'lightgreen';
             }
 
-            else {
-
-                answerContainers[i].style.color = 'red'
-            }
         }
 
         resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;

@@ -6,60 +6,60 @@ var myQuestions = [
     {
     question: "The code in The Martrix comes from what food recipes?",
     answers: {
-        a: "Sushi recipes", 
-        b: "Dumpling recipes",
-        c: "Stir-fry recipes", 
-        d: "Pad thai recpies", 
+        A: " Sushi recipes", 
+        B: " Dumpling recipes",
+        C: " Stir-fry recipes", 
+        D: " Pad thai recpies", 
     },
 
-    correctAnswer: 'a'
+    correctAnswer: 'A'
 
 },
 {
     question: "Where were The Lord of the Rings movies filmed?",
     answers: {
-        a: "Ireland",
-        b: "Iceland",
-        c: "New Zealand", 
-        d: "Australia", 
+        
+        A: " Ireland",
+        B: " Iceland",
+        C: " New Zealand", 
+        D: " Australia", 
     },
 
-    correctAnswer: 'c'
+    correctAnswer: 'C'
 
 },
 {
     question: "If you were to watch the Marvel movies in chronological order, which movie would you watch first?",
     answers: {
-        a: "Iron man", 
-        b: "Captain America: The First Avenger",
-        c: "Doctor Strange",
-        d: "Thor",
+        A: " Iron man", 
+        B: " Captain America: The First Avenger",
+        C: " Doctor Strange",
+        D: " Thor",
     },
 
-    correctAnswer: 'b'
+    correctAnswer: 'B'
 },
 {
     question: "Which movie is this quote from: 'Here's looking at you kid'",
     answers:  {
-        a: "Breakfast at Tiffany's",
-        b: "Citizen Kane", 
-        c: "Casablanca", 
-        d: "Notorious", 
+        A: " Breakfast at Tiffany's",
+        B: " Citizen Kane", 
+        C: " Casablanca", 
+        D: " Notorious", 
     },
 
-    correctAnswer: 'c'
+    correctAnswer: 'C'
     
 },
 {
     question: "Which famous line from Jaws was ad-libbed?",
     answers:  {
-        a: "'I use to hate the water'", 
-        b: "'Your gonna need a bigger boat'",
-        c: "'All this machine does is swim, and eat, and make little sharks'", 
-        d: "'You know, a thing about a shark, hes got lifeless eyes. Black eyes, like a dolls eyes'", 
+        A: "'I use to hate the water'", 
+        B: "'Your gonna need a bigger boat'",
+        C: "'All this machine does is swim, and eat, and make little sharks'", 
     }, 
 
-    correctAnswer: 'b'
+    correctAnswer: 'B'
     }
     
 ];
@@ -79,7 +79,6 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
                 answers.push(
                     '<label>'
                         + '<input type="radio" name="question'+i+'" value="'+letter+'">'
-                        + letter + ': '
                         + questions[i].answers[letter]
                     +'</label>'
                 );
@@ -95,7 +94,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
     }
 
 
-    showQuestions(questions, quizContainer)
+    showQuestions(questions, quizContainer);
 
     function showResults(questions, quizContainer, resultsContainer) {
 
@@ -121,7 +120,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
             }
         }
 
-        resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length
+        resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
 
     }
 

@@ -1,6 +1,12 @@
-var quizContainer = document.getElementById('quiz')
-var resultsContainer = document.getElementById('results')
-var submitButton = document.getElementById('submit')
+// telling javascript which HTML elements to use for quiz, submit and results
+
+var quizContainer = document.getElementById('quiz');
+var resultsContainer = document.getElementById('results');
+var submitButton = document.getElementById('submit');
+
+// inputting questions into javascript in the form of an array of objects
+
+// should ideally be held in an external JSON file
 
 var myQuestions = [
     {
@@ -65,17 +71,34 @@ var myQuestions = [
     
 ];
 
-function generateQuiz(questions, quizContainer, resultsContainer, submitButton) {
+    //function to generate the quiz with parameters created in the file
+
+    function generateQuiz(questions, quizContainer, resultsContainer, submitButton) {
+
+    // showQuestions functions passing in questions as a pointer to myQuestions, and quizContainer
 
     function showQuestions(questions, quizContainer) {
+
+        // variables to store output and choices
+
         var output = [];
         var answers;
 
+        // for each question
+
         for(var i=0; i<questions.length; i++) {
+
+            // reset the list of answers
 
             answers = [];
 
+            // for in loop to get each available answer to the question based on ABCD
+
             for(letter in questions[i].answers) {
+
+                /* answers now an array that includes question: 0, Value A, 'Sushi Recipes'... 
+                + questions[i].answers[letter] gives the correct answer to a specific question
+                i.e question 0, correct answer D */
 
                 answers.push(
                     '<label class="d-flex">'
@@ -85,15 +108,20 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton) 
                 );
             }
 
+            // add this question and its answers to the empty output array
+
             output.push(
                 '<div class="question border border-primary rounded bg-white text-primary flex-nowrap p-3 text-center fs-5 m-3">' + questions[i].question + '</div>'
                 + '<div class="answers fs-5 m-3 p-1 text-start">' + answers.join('') + '</div>'
             );
         }
 
+        // merges output list onto one string
+
         quizContainer.innerHTML = output.join('')
     }
 
+    // call function with parameters coming from generateQuiz
 
     showQuestions(questions, quizContainer);
 

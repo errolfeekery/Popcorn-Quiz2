@@ -94,17 +94,14 @@ var myQuestions = [
 
             // for in loop to get each available answer to the question based on ABCD
 
-            for(letter in questions[i].answers) {
+            for(var letter in questions[i].answers) {
 
                 /* answers now an array that includes question: 0, Value A, 'Sushi Recipes'... 
                 + questions[i].answers[letter] gives the correct answer to a specific question
                 i.e question 0, correct answer D */
 
                 answers.push(
-                    '<label class="d-flex">'
-                        + '<input type="radio" class="col-md-6 float-right" name="question'+i+'" value="'+letter+'">'
-                        + questions[i].answers[letter]
-                    +'</label>'
+                    '<label class="d-flex">'+'<input type="radio" class="col-md-6 float-right" name="question'+i+'" value="'+letter+'">'+questions[i].answers[letter]+'</label>'
                 );
             }
 
@@ -112,7 +109,7 @@ var myQuestions = [
 
             output.push(
                 '<div class="question border border-primary rounded bg-white text-primary flex-nowrap p-3 text-center fs-5 m-3">' + questions[i].question + '</div>'
-                + '<div class="answers fs-5 m-3 p-1 text-start">' + answers.join('') + '</div>'
+                +'<div class="answers fs-5 m-3 p-1 text-start">'+answers.join('')+'</div>'
             );
         }
 
@@ -145,7 +142,7 @@ var myQuestions = [
 
             // identify choice using the selector :checked and value property or if checkbox has been left empty
 
-            userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value
+            userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
 
             // if the answer given is right
 
@@ -153,7 +150,7 @@ var myQuestions = [
 
                 // increment the amount of correct answers
 
-                numCorrect++
+                numCorrect++;
 
                 // then color the answers green else, color them red
 
@@ -178,11 +175,11 @@ var myQuestions = [
 
     submitButton.onclick = function() {
 
-        showResults(questions, quizContainer, resultsContainer)
-    }
+        showResults(questions, quizContainer, resultsContainer);
+    };
 
 }
 
     // finally, generate the full quiz
 
-generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton)
+generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);

@@ -76,4 +76,20 @@ https://8000-errolfeeker-popcornquiz-tbdbgg3s4ll.ws-eu67.gitpod.io/favicon.ico
 
 # Deployment
 
+The site was deployed to gitHub
+
+A live link can be found here [Popcorn-Quiz](https://errolfeekery.github.io/Popcorn-Quiz2/)
+
+# Credits
+
+With all of my previous attempts to create a success JavaScript quiz lacking functionality I was forced to rely heavily on a stack overflow post about how to set up a basic operational quiz.
+
+[Stack Overflow Quiz](https://stackoverflow.com/questions/68116546/how-to-change-javascript-quiz-to-issue-a-pass-and-fail-message-instead-of-score)
+
+What I was able to do was focus on debugging the code and getting it working on my quiz and to ensure that I understood what every line was doing, using breakpoints and console logs. I regret having to use so much of this code and not building significantly on it, but I ran out of time. 
+
+Instructions on how to set up a navbar and showcase with bootstrap was taken from this tutorial
+
+[Bootstrap tutorial](https://www.youtube.com/watch?v=4sosXZsdy-s)
+
 

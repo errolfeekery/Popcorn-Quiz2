@@ -18,5 +18,5 @@ Popcorn Quiz features a number of current features with many more on the way.
 
 * Navigation bar
 
-<img src="media/images/Screenshot%202022-10-05%20at%2004-56-13%20Copy%20of%20Popcorn%20Quiz.png" class="container" alt="drawing" width="full"/>
+<img src="media/images/Screenshot new13.png" class="container" alt="drawing" width="full"/>
 

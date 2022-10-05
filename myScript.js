@@ -125,22 +125,40 @@ var myQuestions = [
 
     showQuestions(questions, quizContainer);
 
+    /* showResults function will find answer for each question, if correct respond,
+    if incoorect, respond, and show the number of correct answers out of the total number of questions */
+
     function showResults(questions, quizContainer, resultsContainer) {
 
+        // assemble answers from quiz (<div class="answers fs-5 m-3 p-1 text-start">' + answers.join('') + '</div>)
+
         var answerContainers = quizContainer.querySelectorAll('.answers');
+
+        // to record user answers
 
         var userAnswer = '';
         var numCorrect = 0;
 
+        // for every question
+
         for(var i=0; i<questions.length; i++) {
+
+            // identify choice using the selector :checked and value property or if checkbox has been left empty
 
             userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value
 
+            // if the answer given is right
+
             if(userAnswer===questions[i].correctAnswer) {
+
+                // increment the amount of correct answers
 
                 numCorrect++
 
+                // then color the answers green else, color them red
+
                 answerContainers[i].style.color = 'forestgreen';
+
             } else {
 
                 answerContainers[i].style.color = 'red';        
@@ -148,9 +166,13 @@ var myQuestions = [
 
         }
 
+        // display the results out of the number of questions
+
         resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
 
     }
+
+    // on the user clicking submit, call showResults
 
     showQuestions(questions, quizContainer);
 
@@ -160,5 +182,7 @@ var myQuestions = [
     }
 
 }
+
+    // finally, generate the full quiz
 
 generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton)

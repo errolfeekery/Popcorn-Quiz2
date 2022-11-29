@@ -2,11 +2,12 @@
 .flex-container {
     display: flex;
     background-color: dodgerblue;
+    justify-content: center;
 }
 
 .flex-container > div {
     margin: 10px;
-    padding: 20px;
+    padding: .5rem;
     font-size: 20px;
     justify-content: space-between;
     align-items: center;
@@ -16,6 +17,15 @@
     color: white;
 }
 
+#submit-button {
+    background-color: black;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    padding: .25rem;
+}
 
 /*
 .signup {

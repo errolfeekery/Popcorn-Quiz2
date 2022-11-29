@@ -1,0 +1,38 @@
+
+.flex-container {
+    display: flex;
+    background-color: dodgerblue;
+}
+
+.flex-container > div {
+    margin: 10px;
+    padding: 20px;
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#h3 {
+    color: white;
+}
+
+
+/*
+.signup {
+    background-color: dodgerblue;
+    padding: 1rem;
+}
+
+.signup-container {
+    display: flex;
+    grid-template-columns: auto auto;
+}
+
+#newsletter {
+    justify-content: space-between;
+    align-items: center;
+}
+
+#h3 {
+    color: white;
+*/

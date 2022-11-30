@@ -13,8 +13,12 @@
     align-items: center;
 }
 
-#h3 {
+.heading {
     color: white;
+}
+
+#results {
+    font-size: 1rem;
 }
 
 #submit-button {

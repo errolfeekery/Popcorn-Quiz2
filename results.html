@@ -34,16 +34,15 @@
     </section>
 
     <section class="flex-container">
-        <div>
-            <h3 class="heading">Sign Up For Our Newsletter</h3>
-        </div>
-        <div>
-            <form action="results.html" method="GET">
-                <label for="Member"></label>
-                <input type="email" id="Member" name="Member" aria-placeholder="Your email">
-                <input type="submit" value="Submit" id="submit-button">
-            </form>
-        </div>
+        <div id="results"></div>
+        <script>
+            const resultsList = document.getElementById('results')
+            new URLSearchParams(window.location.search).forEach((value,
+                name) => {
+                resultsList.append(`${name}: ${value}`)
+                resultsList.append(document.createElement('br'))
+            })
+        </script>
     </section>
 
     <!-- button to bring user to quiz page-->

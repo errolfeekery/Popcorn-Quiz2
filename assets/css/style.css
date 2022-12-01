@@ -13,14 +13,6 @@
     align-items: center;
 }
 
-.heading {
-    color: white;
-}
-
-#results {
-    font-size: 1rem;
-}
-
 #submit-button {
     background-color: black;
     color: white;
@@ -30,23 +22,3 @@
     border: none;
     padding: .25rem;
 }
-
-/*
-.signup {
-    background-color: dodgerblue;
-    padding: 1rem;
-}
-
-.signup-container {
-    display: flex;
-    grid-template-columns: auto auto;
-}
-
-#newsletter {
-    justify-content: space-between;
-    align-items: center;
-}
-
-#h3 {
-    color: white;
-*/
